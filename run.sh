@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [[ ! -z "${KITTY_PID}" ]]; then
+  TERM=xterm-kitty
+fi
+
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 rm -f /tmp/tmux_super_fingers_error.txt
